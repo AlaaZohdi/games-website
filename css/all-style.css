@@ -1,0 +1,648 @@
+/* ?================= general tags ================= */
+body {
+  margin: 0;
+  background-color: var(--black-bg);
+  color: #f1f1f1;
+  font-family: var(--main-font);
+}
+body::-moz-selection {
+  background-color: var(--main-color);
+  color: black;
+}
+body::selection {
+  background-color: var(--main-color);
+  color: black;
+}
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Chakra_Petch;
+  src: url(../fonts/Chakra_Petch/ChakraPetch-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Chakra_Petch;
+  src: url(../fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Chakra_Petch;
+  src: url(../fonts/Chakra_Petch/ChakraPetch-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Chakra_Petch;
+  src: url(../fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: DaysOne;
+  src: url(../fonts/DaysOne-Regular.ttf);
+  font-weight: 400;
+}
+:root {
+  --main-color: #cbfe1c;
+  --black-bg: #0b0e13;
+  --main-font: Chakra_Petch;
+  --title-font: DaysOne;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+p {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  font-family: var(--main-font);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ?================= general classes ================= */
+.text-main-color {
+  color: var(--main-color);
+}
+.main-font {
+  font-family: Chakra_Petch;
+}
+.title-font {
+  font-family: DaysOne;
+}
+.desc {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #d1d5dc;
+}
+.bg-main-color {
+  background-color: var(--main-color);
+}
+.border-main-color {
+  border: 3px solid #cbfe1c;
+}
+.small-font {
+  font-size: 12px;
+}
+.section-title {
+  font-family: var(--title-font);
+}
+.sub-title {
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+.sub-title::before,
+.sub-title::after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  display: block;
+  position: absolute;
+}
+.sub-title::before {
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  transform: translatey(-50%);
+  left: 25%;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#cbfe1c),
+    to(#c9fe1c4a)
+  );
+  background-image: -o-linear-gradient(right, #cbfe1c, #c9fe1c4a);
+  background-image: linear-gradient(to left, #cbfe1c, #c9fe1c4a);
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.sub-title::after {
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  transform: translatey(-50%);
+  right: 25%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#cbfe1c),
+    to(#c9fe1c4a)
+  );
+  background-image: -o-linear-gradient(left, #cbfe1c, #c9fe1c4a);
+  background-image: linear-gradient(to right, #cbfe1c, #c9fe1c4a);
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.main-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.transition-5 {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#heroSection .contant-wrapper .btn-hover:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+.gray-text {
+  color: #99a1af;
+}
+.hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+.hover-effect::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -100px;
+  top: 0;
+  width: 30px;
+  height: 150%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    color-stop(rgba(255, 255, 255, 0.413)),
+    to(transparent)
+  );
+  background: -o-linear-gradient(
+    left,
+    transparent,
+    rgba(255, 255, 255, 0.413),
+    transparent
+  );
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.413),
+    transparent
+  );
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.hover-effect:hover::after {
+  left: 100%;
+}
+@import url(../css/common.css);
+
+/*? ==================== navBar section ======================= */
+.bg-body-tertiary {
+  background-color: var(--black-bg) !important;
+}
+hr {
+  color: #1e2939;
+}
+#navBar .nav-link {
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-block: 7px;
+}
+#navBar .nav-link:hover {
+  color: var(--main-color);
+}
+#navBar .active {
+  color: var(--main-color);
+}
+/*? ====================== hero section ======================= */
+#heroSection {
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.881))),
+    url(../images/hero-bg.jpg);
+  background-image:
+    -o-linear-gradient(rgba(0, 0, 0, 0.881)), url(../images/hero-bg.jpg);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.881)), url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#heroSection button {
+  width: 100%;
+}
+#heroSection .img-wrapper {
+  background-image: url(../images/hero-img.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+}
+.hero-span {
+  bottom: -10%;
+  left: -2%;
+  background-color: var(--black-bg);
+  border: 1px solid rgba(137, 133, 133, 0.79);
+}
+#heroSection .contant-wrapper button:last-child {
+  background-color: transparent;
+}
+/*? ======================= our games section ========================= */
+.our-games-item {
+  height: 80%;
+  width: 95%;
+  margin: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.spans {
+  display: none;
+}
+.spans span {
+  background-color: rgba(0, 0, 0, 0.534);
+  font-size: 14px;
+}
+.spans span:first-child {
+  top: 15px;
+  left: 10px;
+}
+.spans span:nth-child(2) {
+  top: 15px;
+  left: 160px;
+}
+.game-name {
+  bottom: 20px;
+  left: 15px;
+  font-size: 17px;
+  color: black;
+  font-weight: 700;
+}
+
+.our-games-item:hover .spans {
+  display: block;
+}
+.effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(1%, var(--main-color)),
+    color-stop(transparent),
+    to(transparent)
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    var(--main-color) 1%,
+    transparent,
+    transparent
+  );
+  background-image: linear-gradient(
+    to top,
+    var(--main-color) 1%,
+    transparent,
+    transparent
+  );
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  border-radius: 10px;
+}
+.our-games-item:hover .effect {
+  display: block;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+  border: solid 3px var(--main-color);
+  border-radius: 20px;
+}
+/*? ==================== what we do section ======================== */
+#whatWeDoSection .item {
+  background-color: #1a1a1a;
+  border: solid 1px rgb(24, 24, 51);
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#whatWeDoSection .item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 20px solid;
+  border-color: transparent var(--main-color) transparent transparent;
+  top: -10px;
+  left: -10px;
+  -webkit-transform: rotate(45deg) translateX(-100%);
+  -ms-transform: rotate(45deg) translateX(-100%);
+  transform: rotate(45deg) translateX(-100%);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#whatWeDoSection .item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 20px solid;
+  border-color: transparent var(--main-color) transparent transparent;
+  bottom: -10px;
+  right: -10px;
+  -webkit-transform: rotate(225deg) translateX(-100%);
+  -ms-transform: rotate(225deg) translateX(-100%);
+  transform: rotate(225deg) translateX(-100%);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#whatWeDoSection .item:hover .icon-wrapper {
+  background-color: var(--main-color);
+  color: black;
+}
+#whatWeDoSection .item:hover::before {
+  -webkit-transform: rotate(45deg) translateX(0);
+  -ms-transform: rotate(45deg) translateX(0);
+  transform: rotate(45deg) translateX(0);
+}
+#whatWeDoSection .item:hover::after {
+  -webkit-transform: rotate(225deg) translateX(0%);
+  -ms-transform: rotate(225deg) translateX(0%);
+  transform: rotate(225deg) translateX(0%);
+}
+#whatWeDoSection .item .icon-wrapper {
+  color: var(--main-color);
+  background-color: #1e2939;
+  padding-inline: 20px;
+}
+#whatWeDoSection .item:hover {
+  border: 1px solid var(--main-color);
+}
+#whatWeDoSection .item p {
+  font-size: 16px;
+  font-weight: 700;
+}
+#whatWeDoSection img {
+  height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#carouselExampleIndicators button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 95%;
+  border: #1e2939 1px solid;
+}
+#carouselExampleIndicators button:first-of-type {
+  left: 40%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#carouselExampleIndicators button:last-of-type {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.games-btn {
+  background-color: transparent;
+  left: 55%;
+  top: 94%;
+  padding: 15px;
+}
+.games-btn:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+
+/*?======================== animation part =============================  */
+#animation {
+  overflow: hidden;
+  background: -o-radial-gradient(circle, rgba(203, 254, 28, 1) 0%, #0b0e13 42%);
+  background: radial-gradient(circle, rgba(203, 254, 28, 1) 0%, #0b0e13 42%);
+  padding: 20px;
+}
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 10px;
+}
+.logo {
+  width: 100px;
+  border-radius: 10px;
+}
+.row1 {
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-animation: moveleft 10s infinite linear;
+  animation: moveleft 10s infinite linear;
+}
+@-webkit-keyframes moveleft {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(50%);
+    transform: translate(50%);
+  }
+}
+@keyframes moveleft {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(50%);
+    transform: translate(50%);
+  }
+}
+.row2 {
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-animation: moveright 10s infinite linear;
+  animation: moveright 10s infinite linear;
+}
+@-webkit-keyframes moveright {
+  0% {
+    -webkit-transform: translate(50%);
+    transform: translate(50%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes moveright {
+  0% {
+    -webkit-transform: translate(50%);
+    transform: translate(50%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+/* ? ?======================= our team ============================ */
+.team-member {
+  height: 300px;
+  overflow: hidden;
+}
+.team-member img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.p {
+  position: absolute;
+  right: 0px;
+  bottom: 20%;
+  -webkit-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+  font-weight: bold;
+  color: var(--main-color);
+}
+.layer {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  z-index: 999;
+  border-radius: 10px;
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+}
+.team-member:hover .layer {
+  top: -100%;
+}
+/* ? ?========================== contact =========================== */
+#contact {
+  background-color: #101726;
+}
+.contact-item {
+  background-color: #1e2939;
+}
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+}
+.join-community {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--main-color)),
+    to(lightgreen)
+  );
+  background-image: -o-linear-gradient(left, var(--main-color), lightgreen);
+  background-image: linear-gradient(to right, var(--main-color), lightgreen);
+  color: black;
+}
+.form input,
+select {
+  background-color: #364153;
+  border: rgba(126, 121, 121, 0.516) 1px solid;
+  width: 100%;
+}
+.form input::-webkit-input-placeholder {
+  color: #89909a;
+  font-family: Chakra_Petch;
+}
+.form input::-moz-placeholder {
+  color: #89909a;
+  font-family: Chakra_Petch;
+}
+.form input:-ms-input-placeholder {
+  color: #89909a;
+  font-family: Chakra_Petch;
+}
+.form input::-ms-input-placeholder {
+  color: #89909a;
+  font-family: Chakra_Petch;
+}
+.form input::placeholder {
+  color: #89909a;
+  font-family: Chakra_Petch;
+}
+.text-area {
+  height: 90px;
+}
+.form input[type="checkbox"] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form hr {
+  color: #89909a;
+}
+/* ?============ footer ================ */
+.footer-hover:hover {
+  color: var(--main-color);
+}
+#footer li {
+  font-size: 0.85rem;
+}
+#footer hr {
+  color: #89909a;
+}
