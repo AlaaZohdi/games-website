@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  #heroSection button {
+    width: auto;
+    font-size: 16px;
+  }
+  #navBar li {
+    font-size: 16px;
+  }
+  #navBar li p {
+    display: none;
+  }
+  .sub-title::before {
+    width: 5%;
+    left: 36%;
+  }
+  .sub-title::after {
+    width: 5%;
+    right: 36%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #heroSection {
+    height: 100vh;
+  }
+  #heroSection .contant-wrapper {
+    width: 40%;
+  }
+  #heroSection .img-wrapper {
+    width: 50%;
+    height: 400px;
+  }
+  #contact .contact-wrapper,
+  #contact .form {
+    width: 50%;
+  }
+}
